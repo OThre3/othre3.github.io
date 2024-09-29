@@ -19,13 +19,13 @@ importers:
         version: 2.1.3
       '@svgr/plugin-svgo':
         specifier: ^8.1.0
-        version: 8.1.0(@svgr/core@8.1.0)
+        version: 8.1.0(@svgr/core@8.1.0(typescript@5.2.2))
       '@vercel/analytics':
         specifier: ^0.1.6
         version: 0.1.11(react@18.2.0)
       '@vitejs/plugin-react':
         specifier: ^4.0.0
-        version: 4.0.4(vite@4.4.9)
+        version: 4.0.4(vite@4.4.9(@types/node@20.5.7))
       gcoord:
         specifier: ^0.3.2
         version: 0.3.2
@@ -49,13 +49,13 @@ importers:
         version: 2.1.0
       react-helmet-async:
         specifier: ^1.3.0
-        version: 1.3.0(react-dom@18.2.0)(react@18.2.0)
+        version: 1.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-map-gl:
         specifier: ^7.1.6
-        version: 7.1.6(mapbox-gl@2.15.0)(react-dom@18.2.0)(react@18.2.0)
+        version: 7.1.6(mapbox-gl@2.15.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-router-dom:
         specifier: ^6.15.0
-        version: 6.15.0(react-dom@18.2.0)(react@18.2.0)
+        version: 6.15.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       viewport-mercator-project:
         specifier: ^7.0.4
         version: 7.0.4
@@ -64,10 +64,10 @@ importers:
         version: 4.4.9(@types/node@20.5.7)
       vite-plugin-svgr:
         specifier: ^3.2.0
-        version: 3.2.0(vite@4.4.9)
+        version: 3.2.0(rollup@3.29.5)(vite@4.4.9(@types/node@20.5.7))
       vite-tsconfig-paths:
         specifier: ^4.2.0
-        version: 4.2.0(typescript@5.2.2)(vite@4.4.9)
+        version: 4.2.0(typescript@5.2.2)(vite@4.4.9(@types/node@20.5.7))
     devDependencies:
       '@types/geojson':
         specifier: ^7946.0.14
@@ -101,7 +101,7 @@ importers:
         version: 8.10.0(eslint@8.48.0)
       eslint-plugin-prettier:
         specifier: ^4.2.1
-        version: 4.2.1(eslint-config-prettier@8.10.0)(eslint@8.48.0)(prettier@3.2.5)
+        version: 4.2.1(eslint-config-prettier@8.10.0(eslint@8.48.0))(eslint@8.48.0)(prettier@3.2.5)
       eslint-plugin-react:
         specifier: ^7.32.2
         version: 7.33.2(eslint@8.48.0)
@@ -474,6 +474,7 @@ packages:
   '@humanwhocodes/config-array@0.11.11':
     resolution: {integrity: sha512-N2brEuAadi0CcdeMXUkhbZB84eskAc8MEX1By6qEchoVywSgXPIjou4rYsl0V3Hj0ZnuGycGCjdNgockbzeWNA==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -481,6 +482,7 @@ packages:
 
   '@humanwhocodes/object-schema@1.2.1':
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    deprecated: Use @eslint/object-schema instead
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -1362,6 +1364,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   globals@11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
@@ -1449,6 +1452,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -2124,10 +2128,11 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
-  rollup@3.28.1:
-    resolution: {integrity: sha512-R9OMQmIHJm9znrU3m3cpE8uhN0fGdXiawME7aZIpQqvpS/85+Vt1Hq1/yVIcYfOmaQiHjvXkQAoJukvLpau6Yw==}
+  rollup@3.29.5:
+    resolution: {integrity: sha512-GVsDdsbJzzy4S/v3dqWPJ7EfvZJfCHiDqe80IyrF59LYuP+e6U1LJoUqeuqRbwAWoMNoXivMNeNAOf5E22VA1w==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -2421,6 +2426,7 @@ packages:
 
   viewport-mercator-project@7.0.4:
     resolution: {integrity: sha512-0jzpL6pIMocCKWg1C3mqi/N4UPgZC3FzwghEm1H+XsUo8hNZAyJc3QR7YqC816ibOR8aWT5pCsV+gCu8/BMJgg==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   vite-plugin-svgr@3.2.0:
     resolution: {integrity: sha512-Uvq6niTvhqJU6ga78qLKBFJSDvxWhOnyfQSoKpDPMAGxJPo5S3+9hyjExE5YDj6Lpa4uaLkGc1cBgxXov+LjSw==}
@@ -2988,11 +2994,13 @@ snapshots:
 
   '@remix-run/router@1.8.0': {}
 
-  '@rollup/pluginutils@5.0.4':
+  '@rollup/pluginutils@5.0.4(rollup@3.29.5)':
     dependencies:
       '@types/estree': 1.0.1
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    optionalDependencies:
+      rollup: 3.29.5
 
   '@surbowl/world-geo-json-zh@2.1.3': {}
 
@@ -3118,7 +3126,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@svgr/plugin-svgo@8.1.0(@svgr/core@8.1.0)':
+  '@svgr/plugin-svgo@8.1.0(@svgr/core@8.1.0(typescript@5.2.2))':
     dependencies:
       '@svgr/core': 8.1.0(typescript@5.2.2)
       cosmiconfig: 8.2.0
@@ -3166,6 +3174,7 @@ snapshots:
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.2.2)
       debug: 4.3.4
       eslint: 8.48.0
+    optionalDependencies:
       typescript: 5.2.2
     transitivePeerDependencies:
       - supports-color
@@ -3186,6 +3195,7 @@ snapshots:
       is-glob: 4.0.3
       semver: 7.5.4
       tsutils: 3.21.0(typescript@5.2.2)
+    optionalDependencies:
       typescript: 5.2.2
     transitivePeerDependencies:
       - supports-color
@@ -3199,7 +3209,7 @@ snapshots:
     dependencies:
       react: 18.2.0
 
-  '@vitejs/plugin-react@4.0.4(vite@4.4.9)':
+  '@vitejs/plugin-react@4.0.4(vite@4.4.9(@types/node@20.5.7))':
     dependencies:
       '@babel/core': 7.24.4
       '@babel/plugin-transform-react-jsx-self': 7.22.5(@babel/core@7.24.4)
@@ -3436,6 +3446,7 @@ snapshots:
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
+    optionalDependencies:
       typescript: 5.2.2
 
   cross-spawn@7.0.3:
@@ -3663,12 +3674,13 @@ snapshots:
     dependencies:
       eslint: 8.48.0
 
-  eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.10.0)(eslint@8.48.0)(prettier@3.2.5):
+  eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.10.0(eslint@8.48.0))(eslint@8.48.0)(prettier@3.2.5):
     dependencies:
       eslint: 8.48.0
-      eslint-config-prettier: 8.10.0(eslint@8.48.0)
       prettier: 3.2.5
       prettier-linter-helpers: 1.0.0
+    optionalDependencies:
+      eslint-config-prettier: 8.10.0(eslint@8.48.0)
 
   eslint-plugin-react@7.33.2(eslint@8.48.0):
     dependencies:
@@ -4417,8 +4429,9 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.38):
     dependencies:
       lilconfig: 3.1.1
-      postcss: 8.4.38
       yaml: 2.4.1
+    optionalDependencies:
+      postcss: 8.4.38
 
   postcss-nested@6.0.1(postcss@8.4.38):
     dependencies:
@@ -4478,7 +4491,7 @@ snapshots:
 
   react-ga4@2.1.0: {}
 
-  react-helmet-async@1.3.0(react-dom@18.2.0)(react@18.2.0):
+  react-helmet-async@1.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@babel/runtime': 7.22.11
       invariant: 2.2.4
@@ -4490,17 +4503,18 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react-map-gl@7.1.6(mapbox-gl@2.15.0)(react-dom@18.2.0)(react@18.2.0):
+  react-map-gl@7.1.6(mapbox-gl@2.15.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@maplibre/maplibre-gl-style-spec': 19.3.0
       '@types/mapbox-gl': 2.7.13
-      mapbox-gl: 2.15.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    optionalDependencies:
+      mapbox-gl: 2.15.0
 
   react-refresh@0.14.0: {}
 
-  react-router-dom@6.15.0(react-dom@18.2.0)(react@18.2.0):
+  react-router-dom@6.15.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@remix-run/router': 1.8.0
       react: 18.2.0
@@ -4583,7 +4597,7 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rollup@3.28.1:
+  rollup@3.29.5:
     optionalDependencies:
       fsevents: 2.3.3
 
@@ -4824,7 +4838,7 @@ snapshots:
   ts-interface-checker@0.1.13: {}
 
   tsconfck@2.1.2(typescript@5.2.2):
-    dependencies:
+    optionalDependencies:
       typescript: 5.2.2
 
   tslib@1.14.1: {}
@@ -4924,9 +4938,9 @@ snapshots:
     dependencies:
       '@math.gl/web-mercator': 3.6.3
 
-  vite-plugin-svgr@3.2.0(vite@4.4.9):
+  vite-plugin-svgr@3.2.0(rollup@3.29.5)(vite@4.4.9(@types/node@20.5.7)):
     dependencies:
-      '@rollup/pluginutils': 5.0.4
+      '@rollup/pluginutils': 5.0.4(rollup@3.29.5)
       '@svgr/core': 7.0.0
       '@svgr/plugin-jsx': 7.0.0
       vite: 4.4.9(@types/node@20.5.7)
@@ -4934,11 +4948,12 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-tsconfig-paths@4.2.0(typescript@5.2.2)(vite@4.4.9):
+  vite-tsconfig-paths@4.2.0(typescript@5.2.2)(vite@4.4.9(@types/node@20.5.7)):
     dependencies:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 2.1.2(typescript@5.2.2)
+    optionalDependencies:
       vite: 4.4.9(@types/node@20.5.7)
     transitivePeerDependencies:
       - supports-color
@@ -4946,11 +4961,11 @@ snapshots:
 
   vite@4.4.9(@types/node@20.5.7):
     dependencies:
-      '@types/node': 20.5.7
       esbuild: 0.18.20
       postcss: 8.4.38
-      rollup: 3.28.1
+      rollup: 3.29.5
     optionalDependencies:
+      '@types/node': 20.5.7
       fsevents: 2.3.3
 
   vt-pbf@3.1.3:
